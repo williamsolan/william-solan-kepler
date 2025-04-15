@@ -17,97 +17,244 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
 
   <body>
+
     <!-- Navbar -->
 
     <nav>
-      <a href="#About">About</a>
-      <a href="#Experience">Experience</a>
-      <a href="#Connect">Connect</a>
-    </nav>
-
-    <!-- Header -->
-
-    <h1>William Solan</h1>
-
-    <!-- About Section -->
-
-    <section id="About">
-      <h2>About</h2>
-
-      <p>
-        Hello my name is William Solan, I am a Front End Web Developer
-        specializing in HTML, CSS, and JavaScript. I enjoy writing code, and
-        working on projects that showcase my creativity. I am currently a
-        student at Code the Dream, where I am furthering my knowledge in web
-        development. I am also an alumni of The Last Mile, where I first learned
-        coding and continue to learn valuable life skills and sharpen my talent
-        for coding.
-      </p>
-    </section>
-
-    <!-- Experience Section -->
-
-    <section id="Experience">
-      <h2>Experience</h2>
-
       <ul>
         <li>
-          <strong>Student</strong> at Code the Dream (2025 - Present)
-          <ul>
-            <li>Furthering knowledge in HTML, CSS, and JavaScript</li>
-            <li>Created a functioning JavaScript application.</li>
-          </ul>
+          <h1>
+            <a href="index.html"
+              ><span class="fa fa-feather-alt"></span>William Solan</a
+            >
+          </h1>
+        </li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#intro">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/william-solan-814408336/"
+            ><span class="fab fa-linkedin" aria-hidden="true"></span
+            ><span class="sr-only">LinkedIn</span></a
+          >
         </li>
         <li>
-          <strong>Alumni</strong> of The Last Mile (2024 - Present)
+          <a href="https://github.com/williamsolan"
+            ><span class="fab fa-github" aria-hidden="true"></span
+            ><span class="sr-only">Github</span></a
+          >
+        </li>
+        <li>
+          <a href="assets/resume.pdf" target="_blank" class="button-1"
+            >Resume</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Intro Section -->
+
+    <div class="section-image">
+      <section id="intro">
+        <p class="name">Hi, my name is <span>William Solan.</span></p>
+        <h2>I create websites.</h2>
+        <div class="narrow">
+          <p>
+            I am a Front End Web Developer specializing in HTML, CSS, and
+            JavaScript. I enjoy writing code, and working on projects that
+            showcase my creativity. I am currently a student at Code the Dream,
+            where I am furthering my knowledge in web development. I am also an
+            alumni of The Last Mile, where I first learned coding and continue
+            to learn valuable life skills and sharpen my talent for coding.
+          </p>
+          <p>
+            Currently, I'm working on a website called
+            <a href="#projects">Mystic Oracle</a>. This project is a passion of mine.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Skills and Experience -->
+
+      <section id="skills-and-experience">
+        <div>
+          <h2>Skills</h2>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
             <li>Visual Studio Code</li>
             <li>GitLab</li>
+            <li>GitHub</li>
+            <li>Bootstrap</li>
             <li>Affinity Designer</li>
-            <li>Learned best practices in front-end development.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Experience</h2>
+          <ul>
             <li>
-              Developed responsive web applications using HTML, CSS, and
-              JavaScript.
+              <strong>Student</strong> at Code the Dream (2025 - Present)
+              <ul>
+                <li>Furthering knowledge in HTML, CSS, and JavaScript</li>
+                <li>Created a functioning JavaScript application.</li>
+              </ul>
             </li>
             <li>
-              Collaborated with colleagues on various projects to enhance coding
-              skills.
+              <strong>Alumni</strong> of The Last Mile (2024 - Present)
+              <ul>
+                <li>Learned best practices in front-end development.</li>
+                <li>
+                  Developed responsive web applications using HTML, CSS, and
+                  JavaScript.
+                </li>
+                <li>
+                  Collaborated with colleagues on various projects to enhance
+                  coding skills.
+                </li>
+              </ul>
             </li>
           </ul>
-        </li>
-      </ul>
-    </section>
+        </div>
+      </section>
+    </div>
 
-    <!-- Connect Section -->
+    <div class="gradient"></div>
 
-    <section id="Connect">
-      <h2>Connect</h2>
+    <!-- Projects -->
 
+    <div class="section-dkblue">
+      <section id="projects">
+        <h2>Projects I'm proud of</h2>
+        <article>
+          <div class="text">
+            <h4>Latest Project</h4>
+            <h3>Mystic Oracle</h3>
+            <p class="transparent">
+              Mystic Oracle is an evolving online sanctuary that brings my passion for tarot reading to a global audience, offering insight and connection to those seeking guidance. Designed with inclusivity and accessibility at its core, the platform ensures that anyone, regardless of location, can engage with the mystical world of tarot. While still in its early stages, Mystic Oracle embodies my vision of creating an immersive, user-friendly experience where individuals can explore tarot’s wisdom in a personal and meaningful way. Soon, visitors will be able to receive readings directly through the site, unlocking new paths of self-discovery and enlightenment. 
+            </p>
+            <h4>Technologies used include:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <img src="images/mysticoracle-ss.png" />
+        </article>
+        <article class="reverse">
+          <div class="text">
+            <h4>Project 1</h4>
+            <h3>TLM Website Redesign</h3>
+            <p class="transparent">
+              The TLM Website Redesign is a streamlined and visually compelling
+              front-end project designed to enhance user experience while
+              staying true to The Last Mile’s brand identity. Using HTML, CSS,
+              Bootstrap, and Font Awesome, the site ensures clean structuring,
+              responsive styling, dynamic interactivity, and intuitive
+              iconography for seamless navigation. A carefully selected color
+              palette, featuring gold, black, and electric blue, reinforces the
+              brand’s energy, while an original Affinity Designer-crafted logo
+              symbolizes determination and progress. The result is an
+              accessible, engaging website where users can explore TLM’s
+              mission, available courses, and direct contact options with ease.
+            </p>
+            <h4>Technologies used include:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <img src="images/tlm-redesign.png" />
+        </article>
+        <article>
+          <div class="text">
+            <h4>Project 2</h4>
+            <h3>Testimonial</h3>
+            <p class="transparent">
+              This LMS project for The Last Mile required creating a webpage
+              that accurately replicated both mobile (375px) and desktop
+              (1440px) designs using only provided example images as references.
+              Every effort was made to meet all requirements, including refining
+              HTML and CSS for clarity and organization. While following
+              instructions, unnecessary files were deleted, including the
+              designs folder. Some unexpected discrepancies emerged, such as the
+              suggested Arial font differing from the design examples and the
+              favicon icon not appearing in them. In response, the favicon was
+              removed, and Arial was retained as the most comparable available
+              font choice.
+            </p>
+            <h4>Technologies used include:</h4>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+            </ul>
+          </div>
+          <img src="images/testimonial.png" />
+        </article>
+      </section>
+    </div>
+
+    <div class="gradient"></div>
+
+    <!-- Contact -->
+
+    <div class="section-bluegray">
+      <section id="contact">
+        <h2>Contact me</h2>
+        <p>
+          Please feel free to reach out if you have any questions or if you'd
+          like some advice on a project of yours. I'm always willing to help and
+          offer a unique perspective. And of course, my ears are always open to
+          interesting job offers and opportunities.
+        </p>
+        <p>
+          <a href="mailto:williamsolan13@gmail.com" class="button-2"
+            >Email me</a
+          >
+        </p>
+      </section>
+    </div>
+
+    <div class="gradient"></div>
+
+    <!-- Footer -->
+
+    <footer>
+      <h2>William Solan &middot; Web Developer</h2>
       <ul>
         <li>
-          <a href="https://www.linkedin.com/in/william-solan-814408336/" class="button-3"
-            ><span class="fab fa-linkedin" aria-hidden="true">
-              LinkedIN</span
-            ></a
+          <a
+            href="https://www.linkedin.com/in/william-solan-814408336/"
+            class="button-3"
+            ><span class="fab fa-linkedin" aria-hidden="true"></span
+            ><span class="sr-only">LinkedIn</span></a
           >
         </li>
         <li>
           <a href="https://github.com/williamsolan" class="button-3"
-            ><span class="fab fa-github" aria-hidden="true"> GitHub</span></a
+            ><span class="fab fa-github" aria-hidden="true"></span
+            ><span class="sr-only">GitHub</span></a
           >
         </li>
         <li>
           <a href="mailto:williamsolan13@gmail.com" class="button-3"
-            ><span class="fa fa-envelope" aria-hidden="true"> Email</span></a
+            ><span class="fa fa-envelope" aria-hidden="true"></span
+            ><span class="sr-only">Email</span></a
           >
         </li>
       </ul>
-    </section>
+      <p><small>&copy; 2025 William Solan. All rights reserved.</small></p>
+    </footer>
   </body>
 </html>
