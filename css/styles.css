@@ -1,17 +1,17 @@
 :root {
-    --black: #171321;
-    --bluegray: #2B2D42;
-    --dkblue: #0d314b;
-    --hlblue: #8887f2;
-    --hlorange: coral;
-    --hlgreen: mediumspringgreen;
-    --white: #f7f8fa;
-    --font-size: 1.3rem;
-    --mono: Monospace;
-    --sans: Tahoma, Sans-Serif;
-    --accent: Trebuchet MS;
-    --accent2: Permanent Marker;
-    }
+  --black: #171321;
+  --bluegray: #2b2d42;
+  --dkblue: #0d314b;
+  --hlblue: #8887f2;
+  --hlorange: coral;
+  --hlgreen: mediumspringgreen;
+  --white: #f7f8fa;
+  --font-size: 1.3rem;
+  --mono: Monospace;
+  --sans: Tahoma, Sans-Serif;
+  --accent: Trebuchet MS;
+  --accent2: Permanent Marker;
+}
 
 /* global styles */
 
@@ -19,32 +19,34 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
 /* generic styles for the page */
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--sans);
-    background-color: var(--black);
-    color: var(--white);
-    font-size: var(--font-size);
+  margin: 0;
+  padding-top: 5rem;
+  font-family: var(--sans);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: var(--font-size);
 }
 h1,
 h2,
 h3 {
-    margin: 0;
+  margin: 0;
 }
 a {
-    color: var(--hlgreen);
+  color: var(--hlgreen);
 }
 
 a:hover {
-    color: var(--white);
-    text-decoration: none;
+  color: var(--white);
+  text-decoration: none;
 }
 
 img {
@@ -54,7 +56,7 @@ img {
 /* background-color divs */
 
 .section-image {
-  background: url('../images/foliage.jpeg') no-repeat center center;
+  background: url("../images/foliage.jpeg") no-repeat center center;
 }
 
 .section-dkblue {
@@ -66,55 +68,58 @@ img {
 }
 
 .gradient {
-    background: linear-gradient(90deg,rgba(136, 135, 242, 1) 0%, rgba(0, 250, 154, 1) 100%);
-    height: 3px;
-  
+  background: linear-gradient(
+    90deg,
+    rgba(136, 135, 242, 1) 0%,
+    rgba(0, 250, 154, 1) 100%
+  );
+  height: 3px;
 }
 
 /* intro styles */
 
 #intro {
-    padding: 4rem 1rem 10rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 4rem 1rem 10rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .narrow {
-  width: 400px;
-  padding: .5rem;
+  width: 350px;
+  padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
 #intro p {
-    font-size: 1rem;
-    line-height: 1.5;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 #intro .name {
-    font-family: var(--mono);
-    font-size: 1rem;
+  font-family: var(--mono);
+  font-size: 1rem;
 }
 
 .name span {
-    font-family: var(--accent2);
-    font-size: 4rem;
-    color: var(--hlblue);
-    display: block;
-    font-variant: small-caps;
+  font-family: var(--accent2);
+  font-size: 4rem;
+  color: var(--hlblue);
+  display: block;
+  font-variant: small-caps;
 }
 
 #intro h2 {
-    font-size: 4rem;
-    font-weight: normal;
+  font-size: 4rem;
+  font-weight: normal;
 }
 
 /* contact section */
 
 #contact {
-    padding: 3rem 1rem 3rem 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  padding: 3rem 1rem 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #contact h2 {
@@ -122,7 +127,7 @@ img {
 }
 
 #contact p:last-child {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .button-2 {
@@ -144,6 +149,7 @@ nav {
 
 nav h1 a {
   font-family: var(--accent);
+  font-size: 60%;
   color: var(--white);
 }
 
@@ -158,13 +164,9 @@ nav ul {
   gap: 2rem;
 }
 
-nav li:first-child {
-  flex-basis: 100%;
-  text-align: center;
-}
-
 nav [class*="fa-"] {
   font-size: 150%;
+  margin-right: 0.5rem;
   color: var(--hlgreen);
 }
 
@@ -172,11 +174,42 @@ nav [class*="fa-"]:hover {
   color: var(--white);
 }
 
+#icon {
+  font-size: 100%;
+  margin-right: 0.5rem;
+  color: var(--hlgreen);
+}
+
 nav a {
   text-decoration: none;
   display: block;
   margin: 0 -0.5rem;
   padding: 0.5rem;
+}
+
+.navbar-dark {
+  background-color: var(--black) !important; /* Keeps navbar black */
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    transition: none !important; /* Removes delay */
+  }
+
+  .navbar-collapse.show {
+    background: rgba(0, 0, 0, 0.7) !important; /* Dark transparent effect */
+    backdrop-filter: blur(5px); /* Adds slight blur */
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%; /* Starts below navbar */
+    padding: 1rem 1rem;
+  }
+
+  .navbar-nav ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-end; /* Align items to the right */
+  }
 }
 
 .button-1 {
@@ -189,6 +222,11 @@ nav a {
 
 .button-1:hover {
   color: var(--hlblue);
+}
+
+.navbar-collapse.show ul {
+  flex-direction: column; /* Stack items */
+  align-items: flex-end; /* Align to the right */
 }
 
 /* skills and experience */
@@ -234,6 +272,25 @@ nav a {
   font-family: var(--sans);
 }
 
+@media (max-width: 900px) {
+  #skills-and-experience {
+    justify-content: space-between; /* Smoothly spread items before stacking */
+  }
+}
+
+@media (max-width: 768px) {
+  #skills-and-experience {
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center contents horizontally */
+    align-items: center; /* Ensure everything aligns vertically */
+  }
+
+  #skills-and-experience > div {
+    text-align: center; /* Center contents within each div */
+    margin: 0 auto; /* Keep divs aligned to the center */
+  }
+}
+
 /* footer styles */
 
 footer {
@@ -264,7 +321,7 @@ footer ul {
 /* projects section */
 
 #projects {
-  padding: 4rem 1rem;
+  padding: 4rem;
 }
 
 #projects h2 {
@@ -312,62 +369,62 @@ footer ul {
 }
 
 @media (min-width: 550px) {
-  
+
   article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     gap: 1rem;
   }
-  
+
   #projects {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
   }
-  
+
   .text {
     grid-column: 5/11;
     grid-row: 1/2;
     order: 2;
     text-align: right;
   }
-  
+
   #projects ul {
     justify-content: flex-end;
   }
-  
+
   #projects .reverse .text {
     grid-column: 1/7;
     order: 2;
     text-align: left;
   }
-  
+
   #projects .reverse img {
     grid-column: 6/11;
     grid-row: 1/2;
   }
-  
+
   #projects .reverse ul {
     justify-content: flex-start;
   }
-  
+
 }
 
 @media (min-width: 850px) {
-  
+
   nav {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   nav li:first-child {
     flex-basis: auto;
     text-align: left;
     margin-right: auto;
   }
-  
+
 }

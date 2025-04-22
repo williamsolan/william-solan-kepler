@@ -7,59 +7,69 @@
     <title>William Solan's Portfolio</title>
     <meta
       name="description"
-      content="Welcome to my portfolio! I am William Solan, a software engineer with a passion for creating innovative solutions. Explore my projects and skills."
+      content="Welcome to my portfolio! I am William Solan, a Frontend Developer with a passion for creative designs and innovative solutions. Explore my projects and skills."
     />
     <meta
       name="keywords"
-      content="William Solan, software engineer, portfolio, projects, skills, web development, programming"
+      content="William Solan, frontend developer, portfolio, projects, skills, web development, programming"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link
-      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
-      rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
   </head>
 
   <body>
 
     <!-- Navbar -->
 
-    <nav>
-      <ul>
-        <li>
-          <h1>
-            <a href="index.html"
-              ><span class="fa fa-feather-alt"></span>William Solan</a
-            >
-          </h1>
-        </li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#intro">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <a href="https://www.linkedin.com/in/william-solan-814408336/"
-            ><span class="fab fa-linkedin" aria-hidden="true"></span
-            ><span class="sr-only">LinkedIn</span></a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/williamsolan"
-            ><span class="fab fa-github" aria-hidden="true"></span
-            ><span class="sr-only">Github</span></a
-          >
-        </li>
-        <li>
-          <a href="assets/resume.pdf" target="_blank" class="button-1"
-            >Resume</a
-          >
-        </li>
-      </ul>
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg fixed-top">
+
+      <div class="container">
+  
+        <div class="navbar-brand"><h1><a href="index.html" class="brand"><span class="fa fa-feather-alt" id="icon"></span>William Solan</a></h1></div>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myTogglerNav"
+          aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation"><span
+            class="navbar-toggler-icon"></span></button>
+  
+        <div class="collapse navbar-collapse" id="myTogglerNav">
+          <div class="navbar-nav ms-auto">
+  
+            <ul>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#intro">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a href="https://www.linkedin.com/in/william-solan-814408336/"
+                  ><span class="fab fa-linkedin" aria-hidden="true"></span
+                  ><span class="sr-only">LinkedIn</span></a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/williamsolan"
+                  ><span class="fab fa-github" aria-hidden="true"></span
+                  ><span class="sr-only">Github</span></a
+                >
+              </li>
+              <li>
+                <a href="assets/resume.pdf" target="_blank" class="button-1"
+                  >Resume</a
+                >
+              </li>
+            </ul>
+
+          </div> <!-- navbar -->
+        </div> <!-- collapse -->
+  
+      </div> <!-- navbar container -->
+  
     </nav>
 
     <!-- Intro Section -->
@@ -88,7 +98,7 @@
     <!-- Skills and Experience -->
 
       <section id="skills-and-experience">
-        <div>
+        <div> <!-- Skills -->
           <h2>Skills</h2>
           <ul>
             <li>HTML</li>
@@ -101,7 +111,7 @@
             <li>Affinity Designer</li>
           </ul>
         </div>
-        <div>
+        <div> <!-- Experience -->
           <h2>Experience</h2>
           <ul>
             <li>
@@ -256,5 +266,7 @@
       </ul>
       <p><small>&copy; 2025 William Solan. All rights reserved.</small></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/navbar.js"></script>
   </body>
 </html>
