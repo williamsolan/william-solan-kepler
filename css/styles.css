@@ -29,7 +29,7 @@ html {
 
 body {
   margin: 0;
-  padding-top: 5rem;
+  padding: 0;
   font-family: var(--sans);
   background-color: var(--black);
   color: var(--white);
@@ -79,7 +79,7 @@ img {
 /* intro styles */
 
 #intro {
-  padding: 4rem 1rem 10rem 1rem;
+  padding: 10rem 1rem 10rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -191,6 +191,8 @@ nav a {
   background-color: var(--black) !important; /* Keeps navbar black */
 }
 
+/* this media query is to ensure the navbar menu has the desired look once the hamburger button is toggled on both medium and smaller screens */
+
 @media (max-width: 991px) {
   .navbar-collapse {
     transition: none !important; /* Removes delay */
@@ -271,6 +273,8 @@ nav a {
   color: var(--white);
   font-family: var(--sans);
 }
+
+/* these next two media queries ensure my skills and experience divs within the skills-and-experience section transition smoothly when they begin stacking on smaller screens */
 
 @media (max-width: 900px) {
   #skills-and-experience {
@@ -368,6 +372,8 @@ footer ul {
   border-radius: 25px;
 }
 
+/* the projects section was built mobile first, these media queries ensure that once the screen gets bigger than 550px, it will dynamically change and utilize the grid display */
+
 @media (min-width: 550px) {
 
   article {
@@ -414,17 +420,13 @@ footer ul {
 
 }
 
+/* this media query ensures the navbar has the desired look when the screen is bigger than 850px (tablet size and above). it also ensures the navbar's max width is 1200px */
+
 @media (min-width: 850px) {
 
   nav {
     max-width: 1200px;
     margin: 0 auto;
   }
-
-  nav li:first-child {
-    flex-basis: auto;
-    text-align: left;
-    margin-right: auto;
-  }
-
+  
 }
