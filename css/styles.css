@@ -231,27 +231,25 @@ nav a {
   align-items: flex-end; /* Align to the right */
 }
 
-/* skills and experience */
-
-#skills-and-experience {
+#skills {
   padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Space them out side by side */
   gap: 2rem;
 }
 
-#skills-and-experience h2 {
+#skills h2 {
   font-family: var(--accent2);
   font-size: 2.5rem;
   color: var(--hlblue);
   margin-bottom: 1rem;
 }
 
-#skills-and-experience ul {
-  list-style-type: square;
+#skills ul {
+  list-style-type: none;
   margin: 0;
   padding: 1rem;
   border-radius: 5px;
@@ -259,39 +257,33 @@ nav a {
   color: var(--hlgreen);
 }
 
-#skills-and-experience ul li {
+#skills ul li {
   padding: 0.5rem;
   text-align: left;
 }
 
-#skills-and-experience ul ul {
-  margin-top: 0.5rem;
-}
-
-#skills-and-experience ul ul li {
+#skills ul ul li {
   font-size: 0.9rem;
   color: var(--white);
   font-family: var(--sans);
 }
 
-/* these next two media queries ensure my skills and experience divs within the skills-and-experience section transition smoothly when they begin stacking on smaller screens */
-
-@media (max-width: 900px) {
-  #skills-and-experience {
-    justify-content: space-between; /* Smoothly spread items before stacking */
-  }
+/* Skills and Experience divs */
+#skills > div {
+  flex: 1;
+  min-width: 300px; /* Prevents overly narrow columns */
 }
 
+/* Responsive: Stack on smaller screens */
 @media (max-width: 768px) {
-  #skills-and-experience {
-    flex-direction: column; /* Stack items vertically */
-    justify-content: center; /* Center contents horizontally */
-    align-items: center; /* Ensure everything aligns vertically */
+  #skills {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
-  #skills-and-experience > div {
-    text-align: center; /* Center contents within each div */
-    margin: 0 auto; /* Keep divs aligned to the center */
+  #skills > div {
+    width: 100%;
   }
 }
 
