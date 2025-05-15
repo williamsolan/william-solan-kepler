@@ -114,20 +114,37 @@ img {
   font-weight: normal;
 }
 
-/* contact section */
+/* Leave a Message Section (form portion) */
 
-#contact {
-  padding: 3rem 1rem 3rem 1rem;
+form {
+  width: 100%; /* Expands to fit container */
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 4rem;
+}
+
+input,
+textarea {
+  font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+  padding: 8px;
+}
+
+#form-section,
+#messages {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 4rem;
 }
 
-#contact h2 {
-  color: var(--hlorange);
-}
-
-#contact p:last-child {
-  margin-top: 3rem;
+#form-section h2,
+#messages h2 {
+  font-family: var(--accent2);
+  text-align: center;
 }
 
 .button-2 {
@@ -137,6 +154,63 @@ img {
   border-radius: 5px;
   font-family: var(--mono);
   text-decoration: none;
+  max-width: 100px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* messages section */
+
+#messages {
+  padding: 4rem; /* Keeps spacing consistent */
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 8px; /* Softens the edges for a clean look */
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#messages ul li {
+  background: var(--white); /* Keeps message boxes visually separate */
+  color: var(--black); /* Ensures text is readable */
+  padding: 1rem;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-content {
+  display: flex;
+  justify-content: space-between; /* Text stays left, button aligns right */
+  align-items: center;
+  gap: 15px; /* Provides space between text and button */
+  flex-wrap: wrap; /* Ensures text drops to a new line when needed */
+  width: 100%;
+}
+
+.message-text {
+  flex: 1; /* Allows text to take up available space */
+  padding-right: 20px; /* Adds space before button */
+  word-break: break-word; /* Ensures long words don't overflow */
+}
+
+.remove-button {
+  flex-shrink: 0; /* Prevents button from resizing */
+}
+
+.username-link {
+  font-family: var(--accent2);
+  color: var(--hlblue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.username-link:hover {
+  color: #9f9ef7;
 }
 
 /* navbar styles */
@@ -231,6 +305,8 @@ nav a {
   align-items: flex-end; /* Align to the right */
 }
 
+/* Skills Section */
+
 #skills {
   padding: 4rem 1rem;
   max-width: 1200px;
@@ -249,7 +325,7 @@ nav a {
 }
 
 #skills ul {
-  list-style-type: none;
+  list-style-type: square;
   margin: 0;
   padding: 1rem;
   border-radius: 5px;
@@ -328,12 +404,17 @@ footer ul {
 
 #projects h3 {
   color: var(--hlblue);
+  font-family: var(--accent2);
 }
 
 #projects h4 {
   font-size: 1rem;
   font-family: var(--mono);
   margin: 0;
+}
+
+.suffix {
+  margin-bottom: 4rem;
 }
 
 .transparent {
@@ -366,8 +447,7 @@ footer ul {
 
 /* the projects section was built mobile first, these media queries ensure that once the screen gets bigger than 550px, it will dynamically change and utilize the grid display */
 
-@media (min-width: 550px) {
-
+@media (min-width: 850px) {
   article {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -382,6 +462,7 @@ footer ul {
   #projects img {
     grid-column: 1/6;
     grid-row: 1/2;
+    margin-bottom: 8rem;
   }
 
   .text {
@@ -409,16 +490,20 @@ footer ul {
   #projects .reverse ul {
     justify-content: flex-start;
   }
+}
 
+@media (min-width: 850px) {
+  #projects .heading.text {
+    position: relative;
+    top: -4.5rem; /* Moves heading up precisely */
+  }
 }
 
 /* this media query ensures the navbar has the desired look when the screen is bigger than 850px (tablet size and above). it also ensures the navbar's max width is 1200px */
 
 @media (min-width: 850px) {
-
   nav {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
 }

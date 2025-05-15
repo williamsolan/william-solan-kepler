@@ -1,17 +1,22 @@
 document.querySelectorAll('.navbar-nav a').forEach(link => {
     link.addEventListener('click', function (event) {
-        // Check if it's an internal link
         if (this.getAttribute('href').startsWith("#")) {
-            event.preventDefault(); // Prevent default jump behavior
+            event.preventDefault(); // Stop default anchor jump
             let target = document.querySelector(this.getAttribute('href'));
+
+            // If targeting #form-section, adjust to its <h2>
+            if (target && target.id === "form-section") {
+                target = target.querySelector("h2");
+            }
+
             let navbar = document.querySelector('.navbar-collapse');
 
-            // Collapse navbar
+            // Collapse navbar if open
             if (navbar.classList.contains('show')) {
                 new bootstrap.Collapse(navbar).hide();
             }
 
-            // Scroll to the target section smoothly
+            // Scroll smoothly to the target
             window.scrollTo({
                 top: target.offsetTop - 80, // Adjust for fixed navbar height
                 behavior: "smooth"
