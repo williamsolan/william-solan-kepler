@@ -499,6 +499,23 @@ footer ul {
   }
 }
 
+/* Projects2 section (for API's) */
+
+#projects2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+#projects2 li {
+    background-color: #f4f4f4;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* this media query ensures the navbar has the desired look when the screen is bigger than 850px (tablet size and above). it also ensures the navbar's max width is 1200px */
 
 @media (min-width: 850px) {

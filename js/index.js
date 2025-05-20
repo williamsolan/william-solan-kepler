@@ -192,3 +192,28 @@ messageForm.addEventListener("submit", function(event) {
 
     messageForm.reset();
 });
+
+fetch("https://api.github.com/users/williamsolan/repos") 
+  .then(response => response.json()) 
+  .then(repositories => {
+    console.log(repositories); // Log the repository data to see the structure
+  })
+  .catch(error => {
+    console.error("Error fetching repositories:", error);
+  });
+
+  const projectList2 = document.getElementById("projectList2"); 
+
+fetch("https://api.github.com/users/williamsolan/repos") 
+  .then(response => response.json()) 
+  .then(repositories => {
+    repositories.forEach(repo => {
+      const projectItem = document.createElement("li");
+      projectItem.innerText = repo.name; 
+      projectList2.appendChild(projectItem);
+    });
+  })
+  .catch(error => {
+    console.error("Error fetching repositories:", error);
+    projectList2.innerHTML = "<li>Failed to load projects. Please try again later.</li>";
+  });
