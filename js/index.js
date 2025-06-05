@@ -253,3 +253,53 @@ async function fetchGitHubRepos() {
 }
 
 fetchGitHubRepos();
+
+// Leave a Message Section
+const messageForm = document.forms.leave_message;
+
+messageForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const userName = event.target.usersName.value;
+    const userEmail = event.target.usersEmail.value;
+    const userMessage = event.target.usersMessage.value;
+
+    console.log(userName, userEmail, userMessage);
+
+    const messageSection = document.querySelector("#messages");
+    const messageList = messageSection.querySelector("ul");
+
+    const newMessage = document.createElement("li");
+    newMessage.classList.add("message-item"); // Adds styling class
+
+    // Create a wrapper div for message text & button
+    const messageContainer = document.createElement("div");
+    messageContainer.classList.add("message-content"); 
+
+    // Username link
+    const usernameLink = document.createElement("a");
+    usernameLink.href = `mailto:${userEmail}`;
+    usernameLink.textContent = userName;
+    usernameLink.classList.add("username-link");
+
+    // Message text
+    const messageText = document.createElement("span");
+    messageText.textContent = userMessage;
+    messageText.classList.add("message-text");
+
+    // Remove button
+    const removeButton = document.createElement("button");
+    removeButton.innerText = "Remove";
+    removeButton.type = "button";
+    removeButton.classList.add("button-2");
+    removeButton.addEventListener("click", () => newMessage.remove());
+
+    // Append elements properly
+    messageContainer.appendChild(messageText); // Keeps text separate
+    messageContainer.appendChild(removeButton); // Aligns to the right
+    newMessage.appendChild(usernameLink);
+    newMessage.appendChild(messageContainer);
+    messageList.appendChild(newMessage);
+
+    messageForm.reset();
+});
